@@ -672,6 +672,163 @@
 
   </div>
 </section>
+
+  <!-- ═══════════════════ VOLUNTEER SECTION ═══════════════════ -->
+
+<section id="volunteer" class="py-20 md:py-28 bg-white">
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+```
+<!-- Heading -->
+<div class="text-center mb-14">
+  <p class="section-tag mb-3">03 — Join Our Mission</p>
+
+  <h2 class="text-crimson-deep font-bold text-3xl md:text-5xl mb-4">
+    Become A Volunteer
+  </h2>
+
+  <div class="w-24 h-[2px] bg-gold mx-auto mb-5"></div>
+
+  <p class="text-gray-600 max-w-3xl mx-auto">
+    Join UMIID International Association and become part of a movement
+    dedicated to education, youth empowerment, social welfare and nation building.
+  </p>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-10 items-center">
+
+  <!-- Left Side -->
+  <div>
+
+    <div class="grid grid-cols-2 gap-4 mt-6">
+
+      <div class="bg-[#FAF6EF] p-5 rounded-2xl text-center">
+        <div class="text-3xl mb-2">🏆</div>
+        <h4 class="font-bold text-crimson-deep">
+          Official Certificate
+        </h4>
+      </div>
+
+      <div class="bg-[#FAF6EF] p-5 rounded-2xl text-center">
+        <div class="text-3xl mb-2">🤝</div>
+        <h4 class="font-bold text-crimson-deep">
+          Community Service
+        </h4>
+      </div>
+
+      <div class="bg-[#FAF6EF] p-5 rounded-2xl text-center">
+        <div class="text-3xl mb-2">📚</div>
+        <h4 class="font-bold text-crimson-deep">
+          Skill Development
+        </h4>
+      </div>
+
+      <div class="bg-[#FAF6EF] p-5 rounded-2xl text-center">
+        <div class="text-3xl mb-2">🌍</div>
+        <h4 class="font-bold text-crimson-deep">
+          Social Impact
+        </h4>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Right Side Form -->
+  <div class="bg-[#FAF6EF] rounded-3xl p-8 shadow-xl">
+
+    <h3 class="text-2xl font-bold text-crimson-deep mb-6">
+      Volunteer Registration
+    </h3>
+
+    <form id="volunteerForm" class="space-y-4">
+
+      <input
+        type="text"
+        id="fullName"
+        placeholder="Full Name *"
+        required
+        class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7B1020]">
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Email Address *"
+        required
+        class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7B1020]">
+
+      <input
+        type="tel"
+        id="mobile"
+        placeholder="Mobile Number *"
+        required
+        class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7B1020]">
+
+      <input
+        type="text"
+        id="city"
+        placeholder="City *"
+        required
+        class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7B1020]">
+
+      <input
+        type="text"
+        id="aadhaar"
+        placeholder="Aadhaar Number (Optional)"
+        class="w-full p-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#7B1020]">
+
+      <!-- Privacy Policy -->
+      <div class="bg-white rounded-xl p-4 border border-gray-200">
+
+        <label class="flex items-start gap-3">
+
+          <input
+            type="checkbox"
+            id="agree"
+            required
+            class="mt-1">
+
+          <span class="text-sm text-gray-600">
+
+            I confirm that the information provided by me is correct.
+
+            <br><br>
+
+            <strong>Privacy Policy:</strong>
+
+            UMIID International Association respects your privacy.
+            Your information will only be used for volunteer
+            registration, communication, verification and
+            certificate issuance purposes. We do not sell,
+            share or misuse your personal information.
+
+          </span>
+
+        </label>
+
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-gradient-to-r from-gold to-gold-light text-crimson-deep font-black py-4 rounded-xl hover:scale-[1.02] transition-all">
+
+        🤝 REGISTER AS VOLUNTEER
+
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+<!-- ═══════════════════ END VOLUNTEER SECTION ═══════════════════ -->
+
 <!-- ═══════════════════ FOUNDER ═══════════════════ -->
 <section id="founder" class="py-20 md:py-28 bg-crimson-deep relative overflow-hidden">
 
@@ -1594,6 +1751,39 @@ Message: ${message}`;
   window.open(url, '_blank');
 }
 </script>
+<script>
+document.getElementById("volunteerForm").addEventListener("submit", function(e){
 
+  e.preventDefault();
+
+  const name = document.getElementById("fullName").value;
+  const email = document.getElementById("email").value;
+  const mobile = document.getElementById("mobile").value;
+  const city = document.getElementById("city").value;
+  const aadhaar = document.getElementById("aadhaar").value;
+
+  const message = `🌟 NEW VOLUNTEER REGISTRATION
+
+👤 Full Name: ${name}
+
+📧 Email: ${email}
+
+📱 Mobile: ${mobile}
+
+🏙️ City: ${city}
+
+🆔 Aadhaar: ${aadhaar}
+
+🤝 I would like to join UMIID International Association as a Volunteer.
+
+Thank You.`;
+
+  window.open(
+    `https://wa.me/919990555006?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+
+});
+</script>
 </body>
 </html>
